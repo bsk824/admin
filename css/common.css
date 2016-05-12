@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+html, body {height:100%;}
+.login {background:url(../images/bg_login.jpg) no-repeat 50% 50%;}
+.loginWrap {position:fixed;top:50%;left:50%;width:589px;height:401px;margin:-200px 0 0 -245px;background:url(../images/bg_login_wrap.png) no-repeat;}
+.loginWrap h1 {padding:59px 0 24px;text-align:center;}
+.loginTxt {color:#082b4a;font-size:14px;text-align:center;}
+.loginField {width:343px;margin:25px auto 0;border-top:1px solid #eae7e4;}
+.loginField fieldset {padding:29px 0 0;border-top:1px solid #fff;}
+.loginField p label {display:inline-block;width:90px;padding-left:37px;font-size:14px;}
+.loginField p .txt {width:191px;height:32px;padding:0 10px;line-height:32px;background:url(../images/bg_login_input.png) no-repeat;border:0;font-size:12px;}
+.loginField .idWrap {margin:0 0 4px;}
+.loginField .idWrap label {background:url(../images/icon_login_id.png) no-repeat 5px 0;}
+.loginField .pwWrap label {background:url(../images/icon_login_pw.png) no-repeat;}
+.loginField .saveId {display:inline-block;margin:5px 0 0 133px;font-size:13px;}
+.loginField .btnWrap {margin:20px 0 0;}
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>KEIDAS</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/w2ui-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#layout').w2layout({
+		name: 'layout',
+		panels: [
+			{ type: 'top', size: 80, content: 'top' },
+			{ type: 'left', size: 300, content: 'left', resizable: true },
+			{ type: 'main', content: 'main' },
+			{ type: 'bottom', content: 'bottom' }
+		]
+	});
+	w2ui['layout'].load('top', 'header.html');
+})
+</script>
+</head>
+
+<body class="main">
+	<div id="layout">
+		
+	</div>
+</body>
+</html>
