@@ -36,7 +36,7 @@ body {color:#444;font:12px/1.5 Nanum Gothic, dotum, '돋움', sans-serif;-webkit
 h1,h2,h3,h4,h5 {font-size:100%;}
 a {color:#444;text-decoration:none;}
 ul, ol, li {list-style:none;}
-table {width:100%;border-collapse:collapse;border:0;word-break:normal;}
+table {width:100%;border-collapse:collapse;border:0;table-layout:fixed;}
 colgroup {background:none;}
 input, select, textarea, button {color:#444;vertical-align:middle;font:12px/1.5 Nanum Gothic, Dotum, '돋움', Sans-serif;}
 fieldset, img {border:0;}
@@ -46,10 +46,6 @@ legend, caption {visibility:hidden;width:0;font-size:0;line-height:0;text-indent
 address, em {font-style:normal;}
 button {overflow:visible;cursor:pointer;background:none;border:0;}
 
-select {height:33px;line-height:33px;padding:0 5px;background:#fdfeff;border:1px solid #cfd6d9;border-radius:1px;}
-.select {position:relative;display:inline-block;}
-.select label {display:block;}
-.select select {position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
 textarea {padding:0 5px;background:#fdfeff;border:1px solid #cfd6d9;resize:none;border-radius:1px;}
 input.txt {line-height:1.1;padding:0 5px;}
 input.chk {width:13px;height:13px;vertical-align:-2px;}

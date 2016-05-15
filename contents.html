@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>KEIDAS</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/w2ui-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+
+<body>
+	<!-- header -->
+	<div id="header">
+		<div class="headTop">
+			<h1><a href="/"><img src="images/img_logo.png" alt="COOk Medical" /></a></h1>
+			<div class="headMenu">
+				<a href="#" class="link mypage">My page</a>
+				<a href="#" class="link logout">Logout</a>
+				<select class="langSel">
+					<option>Korean</option>
+				</select>
+			</div>
+		</div>
+		<div id="gnb">
+			<div class="gnbNav">
+				<ul>
+					<li><a href="#">RFID태그관리</a>
+						<ul class="depth2">
+							<li><a href="#">태그발행</a></li>
+							<li><a href="#">태그삭제</a></li>
+							<li><a href="#">태그조회</a></li>
+						</ul>
+					</li>
+					<li><a href="#">구매관리</a>
+						<ul class="depth2">
+							<li><a href="#">입고</a></li>
+							<li><a href="#">반품</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="on">납품관리</a> <!-- 활성화 시 a링크에 class="on" -->
+						<ul class="depth2">
+							<li><a href="#">출고</a></li>
+							<li><a href="#">반품</a></li>
+						</ul>
+					</li>
+					<li><a href="#">재고관리</a></li>
+					<li><a href="#">기타관리</a>
+						<ul class="depth2">
+							<li><a href="#">창고간이동</a></li>
+							<li><a href="#">병원간이동</a></li>
+							<li><a href="#">AI</a></li>
+							<li><a href="#">프로시저백</a></li>
+							<li><a href="#">제품폐기</a></li>
+						</ul>
+					</li>
+					<li><a href="#">마감정산</a></li>
+					<li><a href="#">KPI</a>
+						<ul class="depth2">
+							<li><a href="#">마감정산 정확도</a></li>
+							<li><a href="#">재고실사 빈도</a></li>
+						</ul>
+					</li>
+					<li><a href="#">고객지원</a>
+						<ul class="depth2">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">Q&amp;A</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="bg2depth"><div></div></div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- snb -->
+		<div id="snb">
+			<div class="snbWrap">
+				<h2>고객지원</h2>
+				<div class="sNav">
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">Q&amp;A</a></li>
+					</ul>
+				</div>
+				<div class="sNav acoNav">
+					<p class="tit"><strong>Partners</strong></p>
+					<ul>
+						<li><a href="#">3PL</a>
+							<ul>
+								<li><a href="#">DKSH</a></li>
+								<li><a href="#">부산미래케어</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="sNav acoNav">
+					<p class="tit"><strong>Customers</strong></p>
+					<ul>
+						<li><a href="#">대형병원</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+								<li><a href="#">이대목동병원</a></li>
+								<li><a href="#">서울삼성병원</a></li>
+								<li><a href="#">세브란스병원</a></li>
+								<li><a href="#">고려대병원</a></li>
+								<li><a href="#">부산미래케어</a></li>
+							</ul>
+						</li>
+						<li><a href="#">서울</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+						<li><a href="#">경기도</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+						<li><a href="#">부산</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //snb -->
+
+		<button type="button" class="btnSnb"><span>메뉴 숨김</span></button>
+
+		<!-- contents -->
+		<div id="contents">
+			<p class="location">
+				<span>고객지원</span> &gt;
+				<span>공지사항</span>
+			</p>
+			<!-- 게시판 목록 -->
+			<div class="bbsList">
+				<table>
+					<caption>공지사항</caption>
+					<colgroup>
+						<col style="width:8%" />
+						<col style="width:12%" />
+						<col />
+						<col style="width:10%" />
+						<col style="width:10%" />
+						<col style="width:8%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">구분</th>
+							<th scope="col">제목</th>
+							<th scope="col">첨부</th>
+							<th scope="col">등록일</th>
+							<th scope="col">HIT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>1244</td>
+							<td>KEIDAS</td>
+							<td class="txt"><a href="#">서비스 정책 변경 관련 안내 납품관리 및 마감 정산 등 엑셀양식 변경</a></td>
+							<td class="file"><span>3</span></td>
+							<td>2013 / 03 / 01</td>
+							<td>35</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //게시판 목록 -->
+			<br /><br />
+			<!-- 게시판 보기 -->
+			<div class="bbsView">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:12%" />
+						<col />
+						<col style="width:12%" />
+						<col style="width:15%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="4"><strong>[중요]</strong> 납품관리 및 마감정산 등 엑셀양식 변경</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">작성자</th>
+							<td class="name">Cook medical</td>
+							<th scope="row">등록일</th>
+							<td class="date">2015 / 02 / 24</td>
+						</tr>
+						<tr>
+							<td class="file" colspan="4">
+								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
+								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
+								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
+								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
+								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="viewCont">
+					영진닷컴의 새 책 '엑셀·파워포인트·워드2016 & 한글NEO'는 오피스 2016의 핵심 프로그램 엑셀, 파워포인트, 워드2016과 한컴오피스 NEO의 한글 기능을 가장 효율적으로 익히는 방법을 한 권에 담았다. 각 파트를 분권 처리해 편의성을 높였다.<br />
+					저자는 각 기능을 쉽고 빠르게 익혀서 실전 문서를 제작할 수 있도록 자세한 따라하기 방식으로 소개한다. 각 파트별 섹션 시작 부분에는 '인트로' 코너를 마련해, 해당 섹션에서 다루는 전반적 내용을 한눈에 파악할 수 있도록 했다.<br />
+					ⓒ 영진닷컴 <br />
+					▲ⓒ 영진닷컴<br />
+					특히 'TIP' '꼭! 알고가기' 'QR코드로 더 자세히' 등 추가정보를 통해 독자 이해를 돕는다. '스페셜 페이지'에서는 본문에서는 다루지 못한 오피스 2016과 한글 NEO 사용에 유용한 저자 노하우를 소개하며 '체크해봐요'에서는 본문에서 익힌 내용을 활용, 응용력을 키우는 문제를 제공한다. 영진닷컴 펴냄, 
+				</div>
+				<div class="viewAnswer">
+					<p class="answerDate">답변등록일 : 2015 / 03 / 01</p>
+					영진닷컴의 새 책 '엑셀·파워포인트·워드2016 & 한글NEO'는 오피스 2016의 핵심 프로그램 엑셀, 파워포인트, 워드2016과 한컴오피스 NEO의 한글 기능을 가장 효율적으로 익히는 방법을 한 권에 담았다. 각 파트를 분권 처리해 편의성을 높였다.<br />
+					저자는 각 기능을 쉽고 빠르게 익혀서 실전 문서를 제작할 수 있도록 자세한 따라하기 방식으로 소개한다. 각 파트별 섹션 시작 부분에는 '인트로' 코너를 마련해, 해당 섹션에서 다루는 전반적 내용을 한눈에 파악할 수 있도록 했다.<br />
+					ⓒ 영진닷컴 <br />
+					▲ⓒ 영진닷컴
+					<div class="btnWrap">
+						<a href="#" class="btnS btnSlf"><span>Modify</span></a>
+						<a href="#" class="btnS btnSb"><span>Save</span></a>
+					</div>
+				</div>
+				<ul class="viewNav">
+					<li>
+						<span>이전 글</span>
+						<a href="#">영진닷컴의 새 책 '엑셀·파워포인트·워드2016 & 한글NEO'는 오피스 2016의 핵심 프로그램 엑셀, 파워포인스 2016의 핵심 프로그램 엑셀, 파워포인</a>
+					</li>
+					<li>
+						<span>다음 글</span>
+						<a href="#">영진닷컴의 새 책 '엑셀·파워포인트·워드2016 & 한글NEO'는 오피스 2016의 핵심 프로그램 엑셀, 파워포인스 2016의 핵심 프로그램 엑셀, 파워포인</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //게시판 보기 -->
+			<br /><br />
+			<!-- 게시판 쓰기 -->
+			<div class="bbsWrite">
+				<table>
+					<caption>게시물 작성</caption>
+					<colgroup>
+						<col style="width:10%" />
+						<col style="width:30%" />
+						<col style="width:8%" />
+						<col />
+					</colgroup>
+					<tbody>
+						<tr class="subject">
+							<th scope="row">제목</td>
+							<td colspan="3"><input type="text" class="txt" /></td>
+						</tr>
+						<tr>
+							<th scope="row">구분</td>
+							<td>
+								<select>
+									<option>게시물 구분</option>
+									<option>게시물 구분</option>
+									<option>게시물 구분</option>
+								</select>
+							</td>
+							<th scope="row">중요도</td>
+							<td>
+								<input type="checkbox" class="chk" />
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">첨부파일</td>
+							<td colspan="3">
+								<span><input type="file" /> <a href="#" class="fileAdd">파일추가</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="editer">
+								<div>
+									
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //게시판 쓰기 -->
+		</div>
+		<!-- //contents -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="footWrap">
+			<img src="images/img_foot_logo.png" alt="KEIDAS" />
+			<p class="copy"><small>&copy; Hanmi IT all rights reserved.</small></p>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>
+</html>
