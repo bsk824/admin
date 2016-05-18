@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/w2ui-1.4.1.min.js"></script>
 <script type="text/javascript" src="js/ui.js"></script>
 </head>
 
@@ -141,10 +140,299 @@
 
 		<!-- contents -->
 		<div id="contents">
+			<!-- 검색 -->
+			<div class="searchWrap">
+				<div class="searchTable">
+					<table>
+						<caption>검색</caption>
+						<colgroup>
+							<col style="width:14%" />
+							<col style="width:36%" />
+							<col style="width:14%" />
+							<col style="width:36%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">Order Date</td>
+								<td class="date">
+									<span>2016 / 03 / 08</span><button type="button" class="btnCal">시작 일 선택</button>
+									<span class="swung">~</span>
+									<span>2016 / 03 / 08</span><button type="button" class="btnCal">종료 일 선택</button>
+								</td>
+								<td colspan="2" class="date2">
+									<label><input type="radio" class="chk" /> 오늘</label>
+									<label><input type="radio" class="chk" /> 1주일 이내</label>
+									<label><input type="radio" class="chk" /> 1달 이내</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">Order Type</th>
+								<td>
+									<select style="width:242px;">
+										<option>Type</option>
+									</select>
+								</td>
+								<th scope="row">Order No</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Shipment Date</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">Due Date</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Legacy Order No</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">WH Code</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Tag ID</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">SBU No</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Director</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">SBU Name</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Product Name</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">Product Code</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">LOT No</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">Expiry Date</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+							</tr>
+							<tr>
+								<th scope="row">Partner</th>
+								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<th scope="row">Customer</th>
+								<td>
+									<input type="text" class="txt" />
+									/
+									<select>
+										<option>Location</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<a href="#" class="btnSearch">검색</a>
+				<button type="button" class="searchToggle">펼쳐보기</button>
+			</div>
+			<!-- //검색 -->
+
 			<p class="location">
 				<span>고객지원</span> &gt;
-				<span>공지사항</span>
+				<span>공지사항</span> &gt;
+				<select>
+					<option>Location</option>
+				</select>
 			</p>
+			<div class="bbsBtn">
+				<a href="#" class="btnM btnMlf"><span>Delete</span></a>
+				<a href="#" class="btnM btnMb"><span>Upload</span></a>
+				<a href="#" class="btnM btnMlf"><span>Write</span></a>
+			</div>
+
+			
+
+			<!-- 탭메뉴 -->
+			<div class="tabMenu">
+				<ul>
+					<li><a href="#" class="on"><span>All</span></a></li> <!-- 활성화 시 a링크에 class="on" -->
+					<li><a href="#"><span>Packaging</span></a></li>
+					<li><a href="#"><span>Delivery</span></a></li>
+					<li><a href="#"><span>Arrive</span></a></li>
+					<li><a href="#"><span>Error</span></a></li>
+					<li><a href="#"><span>Delete</span></a></li>
+				</ul>
+			</div>
+			<!-- //탭메뉴 -->
+
+			<div class="bbsList">
+				<div class="scrollHead">
+					<table>
+						<caption>목록</caption>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" class="chk" /></th>
+								<th scope="col">Order No</th>
+								<th scope="col">Order Type</th>
+								<th scope="col">Customer / Location</th>
+								<th scope="col">Total Oty</th>
+								<th scope="col">State</th>
+								<th scope="col">View</th>
+								<th scope="col">Partner</th>
+								<th scope="col">Director</th>
+								<th scope="col">Order Date</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="scrollBody">
+					<table>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr class="lineType1">
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr class="lineType2">
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr class="lineType3">
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr class="lineType4">
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" class="chk" /></td>
+								<td>To67062671</td>
+								<td>WHM</td>
+								<td>아산병원 / AI</td>
+								<td>30</td>
+								<td>WHM-pack</td>
+								<td>O</td>
+								<td>DKSH</td>
+								<td>MJOON</td>
+								<td>2016. 03. 31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<br /><br />
+
 			<!-- 게시판 목록 -->
 			<div class="bbsList">
 				<table>
@@ -235,6 +523,19 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="btnWrap">
+				<div class="bbsSearch">
+					<select style="width:80px;">
+						<option>선택</option>
+						<option>검색</option>
+					</select>
+					<input type="text" class="txt" style="width:240px;" />
+					<a href="#" class="btnM btnMlf"><span>검색</span></a>
+				</div>
+				<div class="btnRight">
+					<a href="#" class="btnM btnMb"><span>Write</span></a>
+				</div>
+			</div>
 			<!-- //게시판 목록 -->
 			<br /><br />
 			<!-- 게시판 보기 -->
@@ -261,9 +562,6 @@
 						</tr>
 						<tr>
 							<td class="file" colspan="4">
-								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
-								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
-								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
 								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
 								<span><a href="#">2016_File name_016_File name ame_016_File name</a></span>
 							</td>
@@ -298,6 +596,11 @@
 						<a href="#">영진닷컴의 새 책 '엑셀·파워포인트·워드2016 & 한글NEO'는 오피스 2016의 핵심 프로그램 엑셀, 파워포인스 2016의 핵심 프로그램 엑셀, 파워포인</a>
 					</li>
 				</ul>
+			</div>
+			<div class="btnWrap">
+				<a href="#" class="btnM btnMlf"><span>Delete</span></a>
+				<a href="#" class="btnM btnMlf"><span>Re Question</span></a>
+				<a href="#" class="btnM btnMb"><span>List</span></a>
 			</div>
 			<!-- //게시판 보기 -->
 			<br /><br />
@@ -346,7 +649,54 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="btnWrap">
+				<a href="#" class="btnM btnMlf"><span>List</span></a>
+				<a href="#" class="btnM btnMb"><span>Save</span></a>
+			</div>
 			<!-- //게시판 쓰기 -->
+			<!-- 버튼 -->
+			<div class="btnWrap">
+				<a href="#" class="btnProduct">제품 추가</a>
+				<a href="#" class="btnS btnSlf"><span>Modify</span></a>
+				<a href="#" class="btnS btnSb"><span>Save</span></a>
+				<a href="#" class="btnM btnMlf"><span>Re Question</span></a>
+				<a href="#" class="btnM btnMlf"><span>Modify</span></a>
+				<a href="#" class="btnM btnMb"><span>List</span></a>
+				<a href="#" class="btnM btnMb"><span>Save</span></a>
+				<a href="#" class="btnM btnMlf"><span>Short View</span></a>
+				<a href="#" class="btnM btnMlf"><span>List</span></a>
+				<a href="#" class="btnM btnMlf btnPrint"><span>Print</span></a>
+				<a href="#" class="btnM btnMlf btnDown"><span>Download</span></a>
+				<a href="#" class="btnM btnMlf btnHistory"><span>History</span></a>
+			</div>
+			<div class="btnWrap">
+				<div class="bbsSearch">
+					<select style="width:80px;">
+						<option>선택</option>
+						<option>검색</option>
+					</select>
+					<input type="text" class="txt" style="width:240px;" />
+					<a href="#" class="btnM btnMlf"><span>검색</span></a>
+				</div>
+				<div class="btnRight">
+					<a href="#" class="btnM btnMb"><span>Write</span></a>
+				</div>
+			</div>
+			<div class="btnWrap">
+				<div class="btnRight">
+					<a href="#" class="btnM btnMb"><span>Write</span></a>
+					<a href="#" class="btnM btnMlf"><span>Modify</span></a>
+					<a href="#" class="btnM btnMb"><span>List</span></a>
+				</div>
+			</div>
+			<div class="btnWrap">
+				<div class="btnLeft">
+					<a href="#" class="btnM btnMb"><span>Write</span></a>
+					<a href="#" class="btnM btnMlf"><span>Modify</span></a>
+					<a href="#" class="btnM btnMb"><span>List</span></a>
+				</div>
+			</div>
+			<!-- //버튼 -->
 		</div>
 		<!-- //contents -->
 	</div>
