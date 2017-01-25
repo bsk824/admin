@@ -25,7 +25,7 @@ $(function(){
 
 	$.fn.snb = function() {
 		var snbWrap = $(this)
-			,acoMenu = snbWrap.find('.acoNav > ul > li > a');
+			,acoMenu = $('.acoNav > ul > li > a');
 
 		acoMenu.click(function(){
 			var _this = $(this);

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>KEIDAS</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+
+<body>
+	<!-- header -->
+	<div id="header">
+		<div class="headTop">
+			<h1><a href="/"><img src="images/img_logo.png" alt="COOk Medical" /></a></h1>
+			<div class="headMenu">
+				<a href="#" class="link mypage">My page</a>
+				<a href="#" class="link logout">Logout</a>
+				<select class="langSel">
+					<option>Korean</option>
+				</select>
+			</div>
+		</div>
+		<div id="gnb">
+			<div class="gnbNav">
+				<ul>
+					<li><a href="#">RFID태그관리</a>
+						<ul class="depth2">
+							<li><a href="#">태그발행</a></li>
+							<li><a href="#">태그삭제</a></li>
+							<li><a href="#">태그조회</a></li>
+						</ul>
+					</li>
+					<li><a href="#">구매관리</a>
+						<ul class="depth2">
+							<li><a href="#">입고</a></li>
+							<li><a href="#">반품</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="on">납품관리</a> <!-- 활성화 시 a링크에 class="on" -->
+						<ul class="depth2">
+							<li><a href="#">출고</a></li>
+							<li><a href="#">반품</a></li>
+						</ul>
+					</li>
+					<li><a href="#">재고관리</a></li>
+					<li><a href="#">기타관리</a>
+						<ul class="depth2">
+							<li><a href="#">창고간이동</a></li>
+							<li><a href="#">병원간이동</a></li>
+							<li><a href="#">AI</a></li>
+							<li><a href="#">프로시저백</a></li>
+							<li><a href="#">제품폐기</a></li>
+						</ul>
+					</li>
+					<li><a href="#">마감정산</a></li>
+					<li><a href="#">KPI</a>
+						<ul class="depth2">
+							<li><a href="#">마감정산 정확도</a></li>
+							<li><a href="#">재고실사 빈도</a></li>
+						</ul>
+					</li>
+					<li><a href="#">고객지원</a>
+						<ul class="depth2">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">Q&amp;A</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="bg2depth"><div></div></div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- snb -->
+		<div id="snb">
+			<div class="snbWrap">
+				<h2>고객지원</h2>
+				<div class="sNav">
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">Q&amp;A</a></li>
+					</ul>
+				</div>
+				<div class="sNav acoNav">
+					<p class="tit"><strong>Partners</strong></p>
+					<ul>
+						<li><a href="#">3PL</a>
+							<ul>
+								<li><a href="#">DKSH</a></li>
+								<li><a href="#">부산미래케어</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="sNav acoNav">
+					<p class="tit"><strong>Customers</strong></p>
+					<ul>
+						<li><a href="#">대형병원</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+								<li><a href="#">이대목동병원</a></li>
+								<li><a href="#">서울삼성병원</a></li>
+								<li><a href="#">세브란스병원</a></li>
+								<li><a href="#">고려대병원</a></li>
+								<li><a href="#">부산미래케어</a></li>
+							</ul>
+						</li>
+						<li><a href="#">서울</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+						<li><a href="#">경기도</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+						<li><a href="#">부산</a>
+							<ul>
+								<li><a href="#">아산병원</a></li>
+								<li><a href="#">건국대학병원</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //snb -->
+
+		<button type="button" class="btnSnb"><span>메뉴 숨김</span></button>
+
+		<!-- contents -->
+		<div id="contents">
+
+			<p class="location">
+				<span>태그관리</span> &gt;
+				<span>태그조회</span>
+			</p>
+			<h2 class="subTitle">기업정보수정</h2>
+			<div class="tabMenu">
+				<ul>
+					<li><a href="#" class="on"><span>기본정보</span></a></li>
+					<li><a href="#"><span>장비관리</span></a></li>
+				</ul>
+			</div>
+			<div class="bbsList2">
+				<table>
+					<caption>기업정보수정</caption>
+					<colgroup>
+						<col style="width:15%" />
+						<col style="width:35%" />
+						<col style="width:15%" />
+						<col style="width:35%" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">회사명</th>
+							<td><input type="text" class="txt" style="width:80%" value="Cook Medical Korea" /></td>
+							<th scope="row">회사 약어명</th>
+							<td><input type="text" class="txt" style="width:70%" value="Cook Korea" /></td>
+						</tr>
+						<tr>
+							<th scope="row">로고등록</th>
+							<td><input type="file" /></td>
+							<th scope="row">주소</th>
+							<td><input type="text" class="txt" style="width:90%" value="서울 영등포구 국제금융로 10 IFC 32층 , 07326" /></td>
+						</tr>
+						<tr>
+							<th scope="row">배경이미지</th>
+							<td><input type="file" /></td>
+							<th scope="row">대표전화번호</th>
+							<td><input type="text" class="txt" style="width:90%" value="02-6292-3500" /></td>
+						</tr>
+						<tr>
+							<th scope="row">기본언어</th>
+							<td>
+								<select>
+									<option>Korean</option>
+								</select>
+							</td>
+							<th scope="row">사업자 번호</th>
+							<td><input type="text" class="txt" style="width:90%" value="213-65-44544" /></td>
+						</tr>
+						<tr>
+							<th scope="row"></th>
+							<td></td>
+							<th scope="row">타임존</th>
+							<td><input type="text" class="txt" style="width:90%" value="UTC + 9 : 00 서울" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btnWrap">
+				<a href="#" class="btnM btnMb"><span>저장</span></a>
+			</div>
+
+			<h2 class="subTitle">RFID Tag Print License (2/3)</h2>
+			<div class="bbsBtn">
+				<a href="#" class="btnM btnMb"><span>수정</span></a>
+				<a href="#" class="btnM btnMb"><span>삭제</span></a>
+				<a href="#" class="btnM btnMb"><span>추가</span></a>
+			</div>
+			<div class="bbsList">
+				<table>
+					<caption>RFID Tag Print License</caption>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" class="chk" /></th>
+							<th scope="col">업체명</th>
+							<th scope="col">Location</th>
+							<th scope="col">인증키</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>DKSH</td>
+							<td>김포</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>미래케어</td>
+							<td>부산</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btnWrap">
+				<a href="#" class="btnM btnMb"><span>저장</span></a>
+				<a href="#" class="btnM btnMlf"><span>취소</span></a>
+			</div>
+
+			<h2 class="subTitle">Mobile License (5/30)</h2>
+			<div class="bbsBtn">
+				<a href="#" class="btnM btnMb"><span>엑셀 등록</span></a>
+				<a href="#" class="btnM btnMb"><span>수정</span></a>
+				<a href="#" class="btnM btnMb"><span>삭제</span></a>
+				<a href="#" class="btnM btnMb"><span>추가</span></a>
+			</div>
+			<div class="bbsList">
+				<table>
+					<caption>Mobile License</caption>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" class="chk" /></th>
+							<th scope="col">이름</th>
+							<th scope="col">소속회사</th>
+							<th scope="col">ID</th>
+							<th scope="col">폰구분</th>
+							<th scope="col">인증키</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>이성계</td>
+							<td>BMC</td>
+							<td>gksal@dksh.com</td>
+							<td>IOS</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>이성계</td>
+							<td>BMC</td>
+							<td>gksal@dksh.com</td>
+							<td>Android</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>이성계</td>
+							<td>BMC</td>
+							<td>gksal@dksh.com</td>
+							<td>Android</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>이성계</td>
+							<td>BMC</td>
+							<td>gksal@dksh.com</td>
+							<td>Android</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>이성계</td>
+							<td>BMC</td>
+							<td>gksal@dksh.com</td>
+							<td>Android</td>
+							<td>00-IE-68-A5-XX-XX</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btnWrap">
+				<a href="#" class="btnM btnMb"><span>저장</span></a>
+				<a href="#" class="btnM btnMlf"><span>취소</span></a>
+			</div>
+
+		</div>
+		<!-- //contents -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="footWrap">
+			<img src="images/img_foot_logo.png" alt="KEIDAS" />
+			<p class="copy"><small>&copy; Hanmi IT all rights reserved.</small></p>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>
+</html>
