@@ -42,16 +42,15 @@ $(function(){
 	$('#snb').snb();
 
 	$('.btnSnb').click(function(){
-		if (!$(this).hasClass('returnSnb')) {
-			$('#snb').css('overflow','hidden');
-			$('#snb').animate({'width' : '0'},300);
+		var $this = $(this);
+		if (!$this.hasClass('returnSnb')) {
+			$('#snb').css('overflow','hidden').animate({'width' : '0'},300);
 			$('#contents').animate({'width' : '1000px'},300);
-			$(this).animate({'margin-left':'-520px'},300,function(){$(this).addClass('returnSnb')});
+			$this.animate({'margin-left':'-520px'},300,function(){$this.addClass('returnSnb')});
 		} else {
-			$('#snb').css('overflow','');
-			$('#snb').animate({'width' : '150px'},300);
+			$('#snb').css('overflow','').animate({'width' : '150px'},300);
 			$('#contents').animate({'width' : '820px'},300);
-			$(this).animate({'margin-left':'-340px'},300,function(){$(this).removeClass('returnSnb')});
+			$this.animate({'margin-left':'-340px'},300,function(){$this.removeClass('returnSnb')});
 		}
 	});
 	$('.searchToggle').click(function(){
@@ -64,4 +63,20 @@ $(function(){
 			$(this).removeClass('openSearch');
 		}
 	});
+	
+});
+var winW = $(window).width();
+function fontSize(w) {
+	if (w < 560) {
+		var fontSize = w / 58;
+		$('html').css('font-size', Math.floor(fontSize*100)/100 + '%');
+	} else {
+		$('html').css('font-size','6.2%');
+	}
+	
+}
+fontSize(winW);
+$(window).resize(function(){
+	var winW = $(window).width();
+	fontSize(winW);
 });
