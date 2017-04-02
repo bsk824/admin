@@ -88,9 +88,9 @@ var winW = $(window).width();
 function fontSize(w) {
 	if (w < 560) {
 		var fontSize = w / 58;
-		$('html').css('font-size', Math.floor(fontSize*100)/100 + '%');
+		$('html').css('font-size', Math.floor(fontSize*100)/10 + '%');
 	} else {
-		$('html').css('font-size','6.2%');
+		$('html').css('font-size','62.5%');
 	}
 	
 }
