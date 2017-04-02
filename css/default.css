@@ -51,6 +51,17 @@ select {border-radius:0;border:1px solid #e9e9e9;}
 input.txt {line-height:1.1;padding:0 5px;border-radius:0;border:1px solid #e9e9e9;}
 input.chk {width:13px;height:13px;vertical-align:-2px;}
 
+.ui-datepicker {width:240px;display:none;background:#fff;border:1px solid #e9e9e9;}
+.ui-datepicker .ui-datepicker-header {position:relative;padding:5px 0;text-align:center;}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {position:absolute;top:10px;font:0/0 a!important;}
+.ui-datepicker .ui-datepicker-prev {left:2px;border:6px solid transparent;border-right:6px solid #333;}
+.ui-datepicker .ui-datepicker-next {right:2px;border:6px solid transparent;border-left:6px solid #333;}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {border:0;background:none;}
+.ui-datepicker td span,
+.ui-datepicker td a {display:block;padding:5px;text-align:center;}
+
 @media all and (max-width:1023px) {
 	body, input, select, textarea, button {font-size:1.4rem}
 	textarea, input.txt {padding:0 0.5rem;border-width:0.1rem;}

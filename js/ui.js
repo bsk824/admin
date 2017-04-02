@@ -16,7 +16,7 @@ $(function(){
 			bg2depth.css('height',depth2H + 'px');
 		}
 		menuBtn.on('click', function(){
-			$(this).toggleClass('acitve');
+			$(this).toggleClass('close');
 			gnbWrap.slideToggle(300);
 		});
 		depth1Menu.on({
@@ -65,7 +65,7 @@ $(function(){
 		if (!$this.hasClass('returnSnb')) {
 			$('#snb').css('overflow','hidden').animate({'width' : '0'},300);
 			$('#contents').animate({'width' : '1000px'},300);
-			$this.animate({'margin-left':'-520px'},300,function(){$this.addClass('returnSnb')});
+			$this.animate({'margin-left':'-510px'},300,function(){$this.addClass('returnSnb')});
 		} else {
 			$('#snb').css('overflow','').animate({'width' : '150px'},300);
 			$('#contents').animate({'width' : '820px'},300);
@@ -81,6 +81,21 @@ $(function(){
 			$('.searchTable').animate({'height' : '95px'},300);
 			$(this).removeClass('openSearch');
 		}
+	});
+	$(".datepicker").datepicker({
+		changeYear: true,
+		changeMonth: true,
+		showMonthAfterYear: true,
+		yearSuffix: "년",
+		showOn: "button",
+		buttonText: "날짜선택",
+		prevText: "이전달",
+		nextText: "다음달",
+		dateFormat: "yy / mm / dd",
+		dayNamesMin: ["일","월","화","수","목","금","토"],
+		monthNamesShort: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
+
+
 	});
 	
 });

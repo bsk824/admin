@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/ui.js"></script>
 </head>
 
@@ -17,6 +18,9 @@
 	<div id="header">
 		<div class="headTop">
 			<h1><a href="/"><img src="images/img_logo.png" alt="COOk Medical" /></a></h1>
+			<button type="button" class="btnMobNav"><span>메뉴 열기 / 닫기</span></button>
+		</div>
+		<div id="gnb">
 			<div class="headMenu">
 				<a href="#" class="link mypage">My page</a>
 				<a href="#" class="link logout">Logout</a>
@@ -24,8 +28,6 @@
 					<option>Korean</option>
 				</select>
 			</div>
-		</div>
-		<div id="gnb">
 			<div class="gnbNav">
 				<ul>
 					<li><a href="#">RFID태그관리</a>
@@ -152,75 +154,71 @@
 				<div class="searchTable">
 					<table>
 						<caption>검색</caption>
-						<colgroup>
-							<col style="width:14%" />
-							<col style="width:36%" />
-							<col style="width:14%" />
-							<col style="width:36%" />
-						</colgroup>
 						<tbody>
 							<tr>
 								<th scope="row">Order Date</td>
-								<td class="date">
-									<span>2016 / 03 / 08</span><button type="button" class="btnCal">시작 일 선택</button>
-									<span class="swung">~</span>
-									<span>2016 / 03 / 08</span><button type="button" class="btnCal">종료 일 선택</button>
-								</td>
-								<td colspan="2" class="date2">
-									<label><input type="radio" class="chk" /> 오늘</label>
-									<label><input type="radio" class="chk" /> 1주일 이내</label>
-									<label><input type="radio" class="chk" /> 1달 이내</label>
+								<td colspan="3">
+									<span class="date">
+										<input type="text" class="txt datepicker" />
+										<span class="swung">~</span>
+										<input type="text" class="txt datepicker" />
+									</span>
+									<span class="date2">
+										<label><input type="radio" class="chk" /> 오늘</label>
+										<label><input type="radio" class="chk" /> 1주일 이내</label>
+										<label><input type="radio" class="chk" /> 1달 이내</label>
+									</span>
 								</td>
 							</tr>
 							<tr>
 								<th scope="row">Order Type</th>
 								<td>
-									<select style="width:242px;">
+									<select>
 										<option>Type</option>
 									</select>
 								</td>
 								<th scope="row">Order No</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Shipment Date</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">Due Date</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Legacy Order No</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">WH Code</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Tag ID</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">SBU No</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Director</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">SBU Name</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Product Name</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">Product Code</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">LOT No</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">Expiry Date</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 							</tr>
 							<tr>
 								<th scope="row">Partner</th>
-								<td><input type="text" class="txt" style="width:230px;" /></td>
+								<td><input type="text" class="txt" /></td>
 								<th scope="row">Customer</th>
 								<td>
 									<input type="text" class="txt" />
