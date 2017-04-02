@@ -4,21 +4,40 @@ $(function(){
 			,depth1Menu = gnbWrap.find('.gnbNav > ul > li > a')
 			,depth2 = gnbWrap.find('.depth2')
 			,bg2depth = gnbWrap.find('.bg2depth')
+			,menuBtn = $('.btnMobNav')
 			,depth2H = 0;
-
-		$('.depth2').each(function(){
-			var _thisH = $(this).height();
-			if (_thisH > depth2H) depth2H = _thisH;
+		
+		if (winW > 1023) {
+			$('.depth2').each(function(){
+				var _thisH = $(this).height();
+				if (_thisH > depth2H) depth2H = _thisH + 30;
+			});
+			depth2.css('height',depth2H + 'px');
+			bg2depth.css('height',depth2H + 'px');
+		}
+		menuBtn.on('click', function(){
+			$(this).toggleClass('acitve');
+			gnbWrap.slideToggle(300);
 		});
-		depth2.css('height',depth2H + 30 + 'px');
-		bg2depth.css('height',depth2H + 30 + 'px');
-		depth1Menu.on('mouseenter', function(){
-			depth2.slideDown(300);
-			bg2depth.slideDown(300);
+		depth1Menu.on({
+			'mouseenter' : function(){
+				if ($(window).width() > 1023) {
+					depth2.slideDown(300);
+					bg2depth.slideDown(300);
+				}
+			},
+			'click' : function(){
+				if ($(window).width() <= 1023) {
+					depth2.slideUp(300);
+					$(this).next().slideDown(300);
+				}
+			}
 		});
 		gnbWrap.on('mouseleave', function(){
-			depth2.stop().slideUp(300);
-			bg2depth.stop().slideUp(300);
+			if ($(window).width() > 1023) {
+				depth2.stop().slideUp(300);
+				bg2depth.stop().slideUp(300);
+			}
 		});
 	}
 	$('#gnb').gnb();
