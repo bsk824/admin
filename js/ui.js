@@ -94,16 +94,14 @@ $(function(){
 		dateFormat: "yy / mm / dd",
 		dayNamesMin: ["일","월","화","수","목","금","토"],
 		monthNamesShort: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
-
-
 	});
 	
 });
 var winW = $(window).width();
 function fontSize(w) {
-	if (w < 560) {
-		var fontSize = w / 58;
-		$('html').css('font-size', Math.floor(fontSize*100)/10 + '%');
+	if (w <= 560) {
+		var fontSize = w / 5.12;
+		$('html').css('font-size', Math.floor(fontSize*100)/100 + '%');
 	} else {
 		$('html').css('font-size','62.5%');
 	}

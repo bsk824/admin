@@ -17,6 +17,21 @@
 .loginField .saveId {display:inline-block;margin:5px 0 0 133px;font-size:13px;}
 .loginField .btnWrap {margin:20px 0 0;}
 .login .copy {position:absolute;bottom:15px;right:0;left:0;text-align:center;color:#fff;}
+@media all and (max-width:561px) {
+	.loginWrap {position:fixed;left:1.5rem;right:1.5rem;width:auto;height:auto;margin:0;padding:3rem 1.5rem;transform:translate(0,-50%);}
+	.loginWrap h1 {padding:0 0 2rem;text-align:center;}
+	.loginWrap h1 img {width:15rem;}
+	.loginTxt {font-size:1.2rem;}
+	.loginField {width:auto;margin:2.5rem 0 0;}
+	.loginField fieldset {padding:3rem 0 0;}
+	.loginField p label {width:7rem;padding-left:3rem;font-size:1.4rem;}
+	.loginField p .txt {width:13rem;height:3rem;padding:0 1rem;line-height:3.2rem;border:0.1rem solid #ccc;border-radius:.5rem;font-size:1.2rem;}
+	.loginField .idWrap {margin:0 0 .4rem;}
+	.loginField .idWrap label {background-position:.4rem 0;}
+	.loginField .saveId {margin:.5rem 0 0 10.5rem;font-size:1.3rem;}
+	.loginField .btnWrap {margin:2rem 0 0;}
+	.login .copy {bottom:1.5rem;}
+}
 
 #header {position:fixed;top:0;left:0;right:0;background:#fff;z-index:100;}
 #header .headTop {position:relative;width:1000px;height:63px;margin:0 auto;}
@@ -137,15 +152,7 @@
 .searchTable .date2 label {margin-right:15px;}
 
 .ui-datepicker-trigger {width:19px;height:19px;margin:0 0 0 5px;background:url(../images/btn_cal.gif) no-repeat;font:0/0 a!important;}
-@media all and (max-width:1023px) {
-	#snb, .btnSnb  {display:none;}
-	#contents {float:none;width:auto!important;}
 
-	.searchTable .date .txt {width:30%;}
-	.searchTable th {float:left;width:20%;}
-	.searchTable td {float:left;width:80%;}
-	.searchTable .date {display:block;}
-}
 
 .searchWrap .btnSearch {position:absolute;top:50%;right:0;overflow:hidden;width:76px;height:76px;margin:-38px 0 0;background:url(../images/btn_search.gif) no-repeat;text-indent:-9999px;}
 .searchWrap .searchToggle {position:absolute;bottom:-25px;left:50%;width:25px;height:24px;overflow:hidden;background:url(../images/btn_search_toggle.gif) no-repeat;text-indent:-9999px;}
@@ -271,6 +278,7 @@ table .alL {text-align:left;}
 
 @media all and (max-width:1023px) {
 	.login {max-height:100%;}
+	.loginWrap {position:absolute;top:50%;left:50%;width:580px;height:390px;margin:0;transform:translate(-50%, -50%);}
 
 	#header .headTop {width:auto;border-bottom:0.1rem solid #105388;box-shadow:0 0 0.5rem rgba(0,0,0,0.2);z-index:2;}
 	.headTop h1 {text-align:center;}
@@ -317,4 +325,11 @@ table .alL {text-align:left;}
 	#footer .footWrap {width:auto;line-height:6rem;}
 	#footer .copy {position:absolute;top:0;right:1.5rem;color:#e8e8e8;line-height:6rem;}
 
+	#snb, .btnSnb  {display:none;}
+	#contents {float:none;width:auto!important;}
+
+	.searchTable .date .txt {width:30%;}
+	.searchTable th {float:left;width:20%;padding:5px 0 0;}
+	.searchTable td {float:left;width:80%;}
+	.searchTable .date {display:block;margin:0 0 .5rem;}
 }
