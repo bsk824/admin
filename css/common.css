@@ -25,27 +25,26 @@
 .headTop h1 img {vertical-align:middle;}
 .headTop .btnMobNav {display:none;}
 
-#gnb {background:#105388;}
+#gnb {background:#105388;height:43px;}
 
 #gnb .headMenu {position:absolute;right:50%;top:16px;margin-right:-500px;}
 #gnb .headMenu .link {display:inline-block;margin:5px 0 0 17px;line-height:20px;font-size:10px;}
 #gnb .headMenu .mypage {padding:0 0 0 18px;background:url(../images/icon_mypage.gif) no-repeat;}
 #gnb .headMenu .logout {display:inline-block;padding:0 0 0 24px;background:url(../images/icon_logout.gif) no-repeat;}
 #gnb .headMenu .langSel {width:99px;height:29px;margin:0 0 0 25px;border:1px solid #e9e9e9;line-height:29px;}
-#gnb .gnbNav {position:relative;width:1000px;height:43px;margin:0 auto;}
+#gnb .gnbNav {position:relative;width:1000px;margin:0 auto;}
 #gnb .gnbNav ul {position:relative;z-index:2;}
+#gnb .gnbNav ul:after {content:"";display:block;clear:both;}
 #gnb .gnbNav li {float:left;width:125px;}
 #gnb .gnbNav li a {display:block;margin:0 0 0 -1px;background:#105388;border:1px solid #0e4d7f;line-height:41px;text-align:center;color:#fff;}
 #gnb .gnbNav li:first-child a {margin:0;}
 #gnb .gnbNav li a.on,
 #gnb .gnbNav li a:hover {position:relative;background:#2b7cbb;border:1px solid #2b7cbb;font-weight:bold;}
-#gnb .gnbNav .depth2 {display:none;position:absolute;top:43px;width:125px;padding:5px 0 0;}
+#gnb .gnbNav .depth2 {display:none;width:125px;padding:5px 0 10px;}
 #gnb .depth2 li {float:none;font-family:Dotum;margin:10px 0 0;}
 #gnb .depth2 li a {background:none;border:0;line-height:1.5;color:#838383;}
 #gnb .depth2 li a:hover {background:none;border:0;font-weight:normal;}
-#gnb .bg2depth {display:none;position:absolute;top:42px;left:0;width:1000px;background:#fff;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);}
-#gnb .bg2depth div {width:1000px;}
-
+#gnb .gnbNav:after {content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:#fff;border:1px solid #e9e9e9;}
 
 #container {width:1000px;margin:108px auto 0;padding:40px 0 80px;}
 #container:after {content:"";display:block;clear:both;}
@@ -277,7 +276,7 @@ table .alL {text-align:left;}
 	.headTop .close:after {top:1.4rem;transform:rotate(45deg);}
 	.headTop .close span {top:1.4rem;transform:rotate(-45deg);}
 	
-	#gnb {display:none;position:absolute;top:6.4rem;right:0;left:0;background:#fff;}
+	#gnb {display:none;height:auto;position:absolute;top:6.4rem;right:0;left:0;background:#fff;}
 	#gnb .headMenu {position:static;margin:1.5rem;text-align:right;}
 	#gnb .headMenu .link {display:inline-block;margin:0.5rem 0 0 1.7rem;line-height:2rem;font-size:1rem;}
 	#gnb .gnbNav {width:auto;height:auto;}
@@ -308,7 +307,7 @@ table .alL {text-align:left;}
 
 	#footer {border-top:0.1rem solid #e9e9e9;}
 	#footer .footWrap {width:auto;line-height:6rem;}
-	#footer .copy {position:absolute;top:0;right:1.5rem;color:#e8e8e8;line-height:6rem;}
+	#footer .copy {position:absolute;top:auto;right:1.5rem;bottom:.5rem;color:#e8e8e8;line-height:1.5rem;}
 
 	#snb, .btnSnb  {display:none;}
 	#contents {float:none;width:auto!important;}
@@ -445,9 +444,23 @@ table .alL {text-align:left;}
 	.bbsView .viewCont {padding:1.5rem;border-top:.1rem solid #e9e9e9;}
 	.bbsView .viewAnswer {padding:1.5rem;border-top:.1rem solid #e9e9e9;}
 	.bbsView .viewAnswer .answerDate {margin:0 0 1rem;}
-	.bbsView .viewNav li {padding:.8rem 0;border-top:.1rem solid #e9e9e9;}
-	.bbsView .viewNav li span {display:inline-block;width:75px;margin-right:10px;text-align:center;}
-	.bbsView .viewNav li a {display:inline-block;max-width:75%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+	.bbsView .viewNav li {position:relative;padding:.8rem 0 .8rem 8.5rem;border-top:.1rem solid #e9e9e9;}
+	.bbsView .viewNav li span {position:absolute;width:7.5rem;left:0;margin-right:0;}
+	.bbsView .viewNav li a {max-width:100%;}
 
+	.bbsWrite {border-top:.2rem solid #2b7cbb;}
+	.bbsWrite, .bbsWrite tbody, .bbsWrite tr {display:block;width:100%;}
+	.bbsWrite tr:after {content:"";display:block;clear:both;}
+	.bbsWrite th,
+	.bbsWrite td {display:inline-block;padding:.5rem 0;text-align:left;border-bottom:.1rem solid #e9e9e9;box-sizing:border-box;}
+	.bbsWrite th {width:25% !important;padding-left:.5rem}
+	.bbsWrite td {width:75% !important;}
+	.bbsWrite .subject .txt {width:100%;line-height:18px;border:1px solid #e9e9e9;box-sizing:border-box;}
+	.bbsWrite .fileAdd {width:2rem;height:2rem;font:0/0 a!important}
+	.bbsWrite input[type="file"] {width:85%;}
+	.bbsWrite .editer {width:100% !important;padding:2rem 0 0;border-top:.1rem solid #444;}
+	.bbsWrite .editer div {height:26rem;}
+
+	colgroup {display:none;}
 
 }
