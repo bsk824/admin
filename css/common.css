@@ -269,12 +269,12 @@ table .alL {text-align:left;}
 	.headTop .btnMobNav {position:absolute;top:1.3rem;right:1.5rem;display:block;width:4rem;height:3.4rem;font:0/0 a!important;}
 	.headTop .btnMobNav:before, .headTop .btnMobNav:after {content:"";}
 	.headTop .btnMobNav:before, .headTop .btnMobNav:after,
-	.headTop .btnMobNav span {position:absolute;width:100%;height:0.6rem;top:0;left:0;background:#105388;font:0/0 a!important;transition:transform .2s;}
+	.headTop .btnMobNav span {position:absolute;width:100%;height:0.6rem;top:0;left:0;background:#105388;font:0/0 a!important;transition:all .3s;}
 	.headTop .btnMobNav:before {top:1.4rem;}
 	.headTop .btnMobNav:after {top:2.8rem;}
 	.headTop .close:before {display:none;}
-	.headTop .close:after {top:1.4rem;transform:rotate(45deg);}
-	.headTop .close span {top:1.4rem;transform:rotate(-45deg);}
+	.headTop .close:after {top:1.4rem;transform:rotate(135deg);}
+	.headTop .close span {top:1.4rem;transform:rotate(-135deg);}
 	
 	#gnb {display:none;height:auto;position:absolute;top:6.4rem;right:0;left:0;background:#fff;}
 	#gnb .headMenu {position:static;margin:1.5rem;text-align:right;}
